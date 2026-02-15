@@ -1,0 +1,242 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "ShiBhu single-page thought leadership portfolio (responsive)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a single-page responsive portfolio layout matching the provided HTML structure and section IDs.",
+      "acceptanceCriteria": [
+        "The app renders as a single-page layout with sections: Header, Navigation, Articles, Core Expertise, Career Overview, About, Footer.",
+        "Navigation links scroll to the corresponding section IDs (#articles, #expertise, #stats, #about).",
+        "All user-facing text content matches the provided HTML (name, tagline, section headings, article titles/descriptions/links, stats, footer copy).",
+        "Layout is responsive and usable on mobile (≤768px) and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page React layout that renders the required sections in order (Header, sticky Navigation, Articles, Core Expertise, Career Overview/Stats, About, Footer) and ensures the section containers use the correct IDs for in-page anchor navigation."
+        },
+        {
+          "path": "frontend/src/components/portfolio/PortfolioPage.tsx",
+          "operation": "create",
+          "description": "Create a page-level component that composes all portfolio sections into a single scrollable page (no multi-page routing)."
+        },
+        {
+          "path": "frontend/src/lib/portfolioContent.ts",
+          "operation": "create",
+          "description": "Add static content/constants (all headings, article categories, cards, stats, about copy, footer text) to keep the portfolio fully frontend-only as required."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update the document title to “ShiBhu - Thought Leadership Portfolio” to match the provided HTML."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement the Header hero section with name, tagline, and five expertise tag pills styled per the provided design.",
+      "acceptanceCriteria": [
+        "Header uses a dark gradient background and centered typography similar to the provided HTML design.",
+        "Expertise tags render as pill/badge UI elements and wrap on smaller screens."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/HeaderSection.tsx",
+          "operation": "create",
+          "description": "Implement the Header section using Tailwind styling (dark hero gradient, centered type) and render the five expertise tags as pill UI elements. Use shadcn/ui styling conventions (e.g., Badge component if available) for consistent pills; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/portfolio/PortfolioPage.tsx",
+          "operation": "modify",
+          "description": "Wire the HeaderSection into the top of the single-page layout; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement a sticky top navigation bar with accessible hover/focus states and anchor scrolling to sections.",
+      "acceptanceCriteria": [
+        "Navigation remains visible at the top while scrolling (sticky).",
+        "Hover and focus states are visible and accessible.",
+        "Clicking a link scrolls to the correct section."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/StickyNav.tsx",
+          "operation": "create",
+          "description": "Create a sticky top navigation bar with links to #articles, #expertise, #stats (Portfolio), and #about, styled as a light bar with accent hover/focus states; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add global styles to support smooth scrolling and anchor offset usability (e.g., scroll-behavior and section scroll-margin-top) to ensure nav links land correctly below the sticky bar."
+        },
+        {
+          "path": "frontend/src/components/portfolio/PortfolioPage.tsx",
+          "operation": "modify",
+          "description": "Wire StickyNav directly below the Header and ensure all target sections exist with matching IDs; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement the Articles section with category groupings and responsive article-card grid including platform badge, date, and secure outbound links.",
+      "acceptanceCriteria": [
+        "Each category heading is shown exactly as provided: “Global Capability Centers & Organizational Models”, “Marketplace Platforms & Ecosystem Strategy”, “Finance & Risk Management”, “Technology Leadership & Digital Transformation”, “Energy & Utilities Sector Strategy”.",
+        "Cards render in a responsive grid (one column on small screens; multiple columns on larger screens).",
+        "Each card includes the exact URLs provided and uses target=\"_blank\" with appropriate rel attributes for security.",
+        "Hover interaction includes a subtle lift and shadow effect similar to the provided HTML."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/ArticlesSection.tsx",
+          "operation": "create",
+          "description": "Implement the Articles section (#articles) that renders the required category headings and a responsive grid of article cards (title, platform badge, date, description, and outbound link opening in a new tab with appropriate rel attributes). Use shadcn/ui Card/Badge patterns if available for consistent cards/badges; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/portfolio/ArticleCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable ArticleCard component with hover lift/shadow behavior, platform badge styling using the single accent color, and a clearly visible outbound link; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/lib/portfolioContent.ts",
+          "operation": "modify",
+          "description": "Populate the full article dataset (categories + cards) with exact titles/descriptions/platform/date/URLs from the provided HTML so the UI renders the correct content."
+        },
+        {
+          "path": "frontend/src/components/portfolio/PortfolioPage.tsx",
+          "operation": "modify",
+          "description": "Wire ArticlesSection into the single-page layout in the correct order; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement the Core Expertise section as a responsive grid of expertise item cards with visual accents.",
+      "acceptanceCriteria": [
+        "Expertise items render as cards/blocks with a clear visual accent (e.g., left border accent) consistent with the design system.",
+        "Grid responds gracefully from mobile to desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/ExpertiseSection.tsx",
+          "operation": "create",
+          "description": "Implement the Core Expertise section (#expertise) as a responsive grid of expertise item cards/blocks with a clear accent (e.g., left border in the single accent color). Use shadcn/ui Card styling patterns if available; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/lib/portfolioContent.ts",
+          "operation": "modify",
+          "description": "Add the provided Core Expertise titles and descriptions as static frontend content/constants."
+        },
+        {
+          "path": "frontend/src/components/portfolio/PortfolioPage.tsx",
+          "operation": "modify",
+          "description": "Wire ExpertiseSection into the single-page layout; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Implement the Career Overview/Stats section with four stat cards in a responsive grid.",
+      "acceptanceCriteria": [
+        "Stats render as uniform cards with a prominent number and a label.",
+        "Layout adapts to screen size (stacking on mobile)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/StatsSection.tsx",
+          "operation": "create",
+          "description": "Implement the Career Overview section (#stats) rendering the four provided stats as uniform responsive cards with prominent numbers and labels. Use shadcn/ui Card patterns if available; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/lib/portfolioContent.ts",
+          "operation": "modify",
+          "description": "Add the four stats values exactly as provided (700+ Published Articles, 50+ Publication Platforms, 9 Expertise Domains, 12 Years Experience)."
+        },
+        {
+          "path": "frontend/src/components/portfolio/PortfolioPage.tsx",
+          "operation": "modify",
+          "description": "Wire StatsSection into the single-page layout; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Implement the About section with the provided two-paragraph bio, centered and readable across breakpoints.",
+      "acceptanceCriteria": [
+        "About text matches exactly and remains readable on mobile and desktop (sensible max width, line height)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/AboutSection.tsx",
+          "operation": "create",
+          "description": "Implement the About section (#about) with the exact two-paragraph bio text, centered with a readable max width and comfortable line height; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/lib/portfolioContent.ts",
+          "operation": "modify",
+          "description": "Add the exact About copy as static content/constants."
+        },
+        {
+          "path": "frontend/src/components/portfolio/PortfolioPage.tsx",
+          "operation": "modify",
+          "description": "Wire AboutSection into the single-page layout; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Implement the Footer with the provided copyright and last-updated line.",
+      "acceptanceCriteria": [
+        "Footer renders with dark background and light text, centered.",
+        "Footer text matches exactly."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/portfolio/FooterSection.tsx",
+          "operation": "create",
+          "description": "Implement a Footer section with dark background and centered light text, rendering the exact provided copyright line and “Portfolio Last Updated: February 15, 2026”; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/lib/portfolioContent.ts",
+          "operation": "modify",
+          "description": "Add the exact footer lines as static content/constants."
+        },
+        {
+          "path": "frontend/src/components/portfolio/PortfolioPage.tsx",
+          "operation": "modify",
+          "description": "Wire FooterSection into the bottom of the single-page layout; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Establish a consistent Tailwind-based visual theme (single accent color) matching the provided HTML/CSS style across typography, spacing, and surfaces.",
+      "acceptanceCriteria": [
+        "A single accent color is used consistently for highlights (e.g., section underline, platform badge, links).",
+        "Sections have consistent spacing and visual separation similar to the provided design (dividers/borders).",
+        "Typography hierarchy is clear (H1, section H2, category headings, card titles)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global theme tokens and base styles consistent with the provided design (dark hero gradient support, off-white surfaces, light-gray section backgrounds, subtle borders, single accent color similar to #0066cc). Ensure no blue+purple dual theme is introduced."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme as needed to support the portfolio design system (accent color, light-gray backgrounds, subtle borders/shadows, typography scale) while keeping a single accent color consistent across components."
+        },
+        {
+          "path": "frontend/src/components/portfolio/PortfolioPage.tsx",
+          "operation": "modify",
+          "description": "Apply consistent section spacing, dividers/borders, and typography hierarchy classes across all sections to match the theme; verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

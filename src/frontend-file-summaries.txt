@@ -1,0 +1,16 @@
+{
+  "frontend/src/App.tsx": "Main application entry point that renders the single-page portfolio layout.",
+  "frontend/src/components/portfolio/PortfolioPage.tsx": "Main portfolio page component that composes all sections (Header, Navigation, Articles, Expertise, Stats, About, Footer) into a single scrollable layout.",
+  "frontend/src/components/portfolio/HeaderSection.tsx": "Hero header section with name, tagline, and expertise tags displayed as pill badges with a dark gradient background.",
+  "frontend/src/components/portfolio/StickyNav.tsx": "Sticky top navigation bar with smooth scroll-to-section functionality for Articles, Expertise, Portfolio, and About links.",
+  "frontend/src/components/portfolio/ArticlesSection.tsx": "Articles section that renders categorized article groups with responsive grid layouts.",
+  "frontend/src/components/portfolio/ArticleCard.tsx": "Reusable article card component with platform badge, date, description, hover effects, and external link.",
+  "frontend/src/components/portfolio/ExpertiseSection.tsx": "Core expertise section displaying expertise items in a responsive grid with left accent borders.",
+  "frontend/src/components/portfolio/StatsSection.tsx": "Career overview section displaying four key statistics in a responsive grid layout.",
+  "frontend/src/components/portfolio/AboutSection.tsx": "About section with centered bio text constrained to a readable width.",
+  "frontend/src/components/portfolio/FooterSection.tsx": "Footer section with copyright, last updated date, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/lib/portfolioContent.ts": "Static content data file containing all portfolio text, articles, expertise items, stats, and footer content with TypeScript interfaces.",
+  "frontend/src/index.css": "Global styles with OKLCH color system, smooth scrolling, scroll-margin for sections, and custom portfolio accent color.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with portfolio-accent color token for consistent theming.",
+  "frontend/index.html": "HTML entry point with updated page title \"ShiBhu - Thought Leadership Portfolio\"."
+}

@@ -1,0 +1,180 @@
+{
+  "kind": "build_request",
+  "title": "ShiBhu single-page thought leadership portfolio (responsive)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page responsive portfolio website for “ShiBhu - Thought Leadership Portfolio” that matches the structure and content from the provided HTML (header, sticky navigation, Articles, Expertise, Career Overview/Stats, About, Footer).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "<!DOCTYPE html> ... <title>ShiBhu - Thought Leadership Portfolio</title> ..."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The app renders as a single-page layout with sections: Header, Navigation, Articles, Core Expertise, Career Overview, About, Footer.",
+        "Navigation links scroll to the corresponding section IDs (#articles, #expertise, #stats, #about).",
+        "All user-facing text content matches the provided HTML (name, tagline, section headings, article titles/descriptions/links, stats, footer copy).",
+        "Layout is responsive and usable on mobile (≤768px) and desktop."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the Header section with the provided content: name “Shivasankari Bhuvaneswaran”, tagline, and the five expertise tags (Global Capability Centers, Marketplace Platforms, Finance & Risk, Technology Leadership, Telecom Strategy) displayed as pills.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "<header>\n        <h1>Shivasankari Bhuvaneswaran</h1>\n        <p class=\"tagline\">Strategic Business Writer | Thought Leader | Enterprise Transformation</p>\n        <div class=\"expertise-tags\"> ... </div>\n    </header>"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header uses a dark gradient background and centered typography similar to the provided HTML design.",
+        "Expertise tags render as pill/badge UI elements and wrap on smaller screens."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement a sticky top Navigation bar with links: Articles, Expertise, Portfolio (anchors to #stats), About, styled as a light bar with hover accent behavior.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "<nav>\n        <a href=\"#articles\">Articles</a>\n        <a href=\"#expertise\">Expertise</a>\n        <a href=\"#stats\">Portfolio</a>\n        <a href=\"#about\">About</a>\n    </nav>"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation remains visible at the top while scrolling (sticky).",
+        "Hover and focus states are visible and accessible.",
+        "Clicking a link scrolls to the correct section."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement the Articles section with categorized groups and responsive article-card grid; each card must include title, platform badge, date, description, and an outbound link that opens in a new tab.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "<section id=\"articles\">\n            <h2>Published Thought Leadership</h2>\n            \n            <h3 ...>Global Capability Centers & Organizational Models</h3>\n            <div class=\"articles-grid\"> ... </div>\n            ...\n        </section>"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each category heading is shown exactly as provided: “Global Capability Centers & Organizational Models”, “Marketplace Platforms & Ecosystem Strategy”, “Finance & Risk Management”, “Technology Leadership & Digital Transformation”, “Energy & Utilities Sector Strategy”.",
+        "Cards render in a responsive grid (one column on small screens; multiple columns on larger screens).",
+        "Each card includes the exact URLs provided and uses target=\"_blank\" with appropriate rel attributes for security.",
+        "Hover interaction includes a subtle lift and shadow effect similar to the provided HTML."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement the Core Expertise section as a responsive grid of expertise items with the provided titles and descriptions.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "<section id=\"expertise\">\n            <h2>Core Expertise</h2>\n            <div class=\"expertise-section\"> ... </div>\n        </section>"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Expertise items render as cards/blocks with a clear visual accent (e.g., left border accent) consistent with the design system.",
+        "Grid responds gracefully from mobile to desktop."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement the Career Overview/Stats section with the four provided stats (700+ Published Articles, 50+ Publication Platforms, 9 Expertise Domains, 12 Years Experience) in a responsive grid.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "<section id=\"stats\">\n            <h2>Career Overview</h2>\n            <div class=\"stats\"> ... </div>\n        </section>"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Stats render as uniform cards with a prominent number and a label.",
+        "Layout adapts to screen size (stacking on mobile)."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement the About section with the provided two-paragraph bio text, centered and constrained to a readable width.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "<section id=\"about\">\n            <h2>About</h2>\n            <div class=\"about-content\"> ... </div>\n        </section>"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About text matches exactly and remains readable on mobile and desktop (sensible max width, line height)."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement the Footer with the provided copyright line and “Portfolio Last Updated: February 15, 2026”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "<footer>\n        <p>&copy; 2026 ShiBhu. All rights reserved.</p>\n        <p>Portfolio Last Updated: February 15, 2026</p>\n    </footer>"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer renders with dark background and light text, centered.",
+        "Footer text matches exactly."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Establish a coherent visual theme using Tailwind CSS inspired by the provided HTML/CSS (dark hero gradient, off-white surfaces, light-gray section backgrounds, subtle borders, and a single accent color similar to #0066cc) and apply it consistently across typography, spacing, cards, and section dividers. Do not use a blue+purple dual theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          ":root { --primary: #1a1a1a; --secondary: #ffffff; --accent: #0066cc; --light-gray: #f5f5f5; --medium-gray: #e0e0e0; --dark-gray: #666666; }"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A single accent color is used consistently for highlights (e.g., section underline, platform badge, links).",
+        "Sections have consistent spacing and visual separation similar to the provided design (dividers/borders).",
+        "Typography hierarchy is clear (H1, section H2, category headings, card titles)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing text.",
+    "Frontend must be implemented using the existing React + TypeScript + Tailwind + shadcn/ui setup; do not edit files under frontend/src/components/ui or other immutable paths listed in SYSTEM_CONTEXT.",
+    "No backend is required for this static portfolio unless strictly necessary; keep content as frontend data/constants."
+  ],
+  "nonGoals": [
+    "Adding authentication (Internet Identity) or user accounts.",
+    "Adding a CMS/editor UI for managing articles.",
+    "Fetching articles from external APIs or scraping the provided URLs.",
+    "Adding multi-page routing beyond a single-page layout."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
