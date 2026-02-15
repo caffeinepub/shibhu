@@ -7,7 +7,7 @@ export default function HeaderSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.03),transparent_50%)]" />
       <div className="relative z-10 container mx-auto max-w-5xl">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 tracking-tight">
-          Shivasankari Bhuvaneswaran
+          ShiBhu
         </h1>
         <p className="text-lg md:text-xl text-gray-300 font-light mb-8">
           Strategic Business Writer | Thought Leader | Enterprise Transformation

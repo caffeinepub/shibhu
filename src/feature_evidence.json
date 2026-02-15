@@ -2,13 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-create-a-single-page-responsive-portfolio-website-for-shibhu-thought-leadership-portfolio-that-matches-the-structure-and-content-from-the-provided-html-header-sticky-navigation-articles-expertise-career-overview-stats-about-footer",
-      "featureTitle": "Create a single-page responsive portfolio website for “ShiBhu - Thought Leadership Portfolio” that matches the structure and content from the provided HTML (header, sticky navigation, Articles, Expertise, Career Overview/Stats, About, Footer).",
+      "featureId": "feature-update-the-hero-header-h1-text-at-xpath-html-1-body-1-div-1-div-1-header-1-div-2-h1-1-to-display-exactly-shibhu-replacing-the-current-text-shivasankari-bhuvaneswaran-without-changing-any-other-header-content-or-styling",
+      "featureTitle": "Update the hero header H1 text at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[2]/h1[1] to display exactly “ShiBhu” (replacing the current text “Shivasankari Bhuvaneswaran”), without changing any other header content or styling.",
       "files": [
-        "frontend/index.html",
-        "frontend/src/App.tsx",
-        "frontend/src/components/portfolio/PortfolioPage.tsx",
-        "frontend/src/lib/portfolioContent.ts"
+        "frontend/src/components/portfolio/HeaderSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -18,167 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-the-header-section-with-the-provided-content-name-shivasankari-bhuvaneswaran-tagline-and-the-five-expertise-tags-global-capability-centers-marketplace-platforms-finance-risk-technology-leadership-telecom-strategy-displayed-as-pills",
-      "featureTitle": "Implement the Header section with the provided content: name “Shivasankari Bhuvaneswaran”, tagline, and the five expertise tags (Global Capability Centers, Marketplace Platforms, Finance & Risk, Technology Leadership, Telecom Strategy) displayed as pills.",
-      "files": [
-        "frontend/src/components/portfolio/HeaderSection.tsx",
-        "frontend/src/components/portfolio/PortfolioPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-a-sticky-top-navigation-bar-with-links-articles-expertise-portfolio-anchors-to-stats-about-styled-as-a-light-bar-with-hover-accent-behavior",
-      "featureTitle": "Implement a sticky top Navigation bar with links: Articles, Expertise, Portfolio (anchors to #stats), About, styled as a light bar with hover accent behavior.",
-      "files": [
-        "frontend/src/components/portfolio/PortfolioPage.tsx",
-        "frontend/src/components/portfolio/StickyNav.tsx",
-        "frontend/src/index.css"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-the-articles-section-with-categorized-groups-and-responsive-article-card-grid-each-card-must-include-title-platform-badge-date-description-and-an-outbound-link-that-opens-in-a-new-tab",
-      "featureTitle": "Implement the Articles section with categorized groups and responsive article-card grid; each card must include title, platform badge, date, description, and an outbound link that opens in a new tab.",
-      "files": [
-        "frontend/src/components/portfolio/ArticleCard.tsx",
-        "frontend/src/components/portfolio/ArticlesSection.tsx",
-        "frontend/src/components/portfolio/PortfolioPage.tsx",
-        "frontend/src/lib/portfolioContent.ts"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-the-core-expertise-section-as-a-responsive-grid-of-expertise-items-with-the-provided-titles-and-descriptions",
-      "featureTitle": "Implement the Core Expertise section as a responsive grid of expertise items with the provided titles and descriptions.",
-      "files": [
-        "frontend/src/components/portfolio/ExpertiseSection.tsx",
-        "frontend/src/components/portfolio/PortfolioPage.tsx",
-        "frontend/src/lib/portfolioContent.ts"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-5"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-the-career-overview-stats-section-with-the-four-provided-stats-700-published-articles-50-publication-platforms-9-expertise-domains-12-years-experience-in-a-responsive-grid",
-      "featureTitle": "Implement the Career Overview/Stats section with the four provided stats (700+ Published Articles, 50+ Publication Platforms, 9 Expertise Domains, 12 Years Experience) in a responsive grid.",
-      "files": [
-        "frontend/src/components/portfolio/PortfolioPage.tsx",
-        "frontend/src/components/portfolio/StatsSection.tsx",
-        "frontend/src/lib/portfolioContent.ts"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-6"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-the-about-section-with-the-provided-two-paragraph-bio-text-centered-and-constrained-to-a-readable-width",
-      "featureTitle": "Implement the About section with the provided two-paragraph bio text, centered and constrained to a readable width.",
-      "files": [
-        "frontend/src/components/portfolio/AboutSection.tsx",
-        "frontend/src/components/portfolio/PortfolioPage.tsx",
-        "frontend/src/lib/portfolioContent.ts"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-7"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-the-footer-with-the-provided-copyright-line-and-portfolio-last-updated-february-15-2026",
-      "featureTitle": "Implement the Footer with the provided copyright line and “Portfolio Last Updated: February 15, 2026”.",
-      "files": [
-        "frontend/src/components/portfolio/FooterSection.tsx",
-        "frontend/src/components/portfolio/PortfolioPage.tsx",
-        "frontend/src/lib/portfolioContent.ts"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-8"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-establish-a-coherent-visual-theme-using-tailwind-css-inspired-by-the-provided-html-css-dark-hero-gradient-off-white-surfaces-light-gray-section-backgrounds-subtle-borders-and-a-single-accent-color-similar-to-0066cc-and-apply-it-consistently-across-typography-spacing-cards-and-section-dividers-do-not-use-a-blue-purple-dual-theme",
-      "featureTitle": "Establish a coherent visual theme using Tailwind CSS inspired by the provided HTML/CSS (dark hero gradient, off-white surfaces, light-gray section backgrounds, subtle borders, and a single accent color similar to #0066cc) and apply it consistently across typography, spacing, cards, and section dividers. Do not use a blue+purple dual theme.",
-      "files": [
-        "frontend/src/components/portfolio/PortfolioPage.tsx",
-        "frontend/src/index.css",
-        "frontend/tailwind.config.js"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-9"
+        "REQ-10"
       ],
       "confidence": "high"
     }

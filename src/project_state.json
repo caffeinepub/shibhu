@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Build a single-page responsive thought leadership portfolio website (ShiBhu) for Shivasankari Bhuvaneswaran, featuring published articles, core expertise, career overview stats, and an about section.",
   "architectural_notes": [
     "Static single-page site built with HTML + CSS (no JS), including responsive design and sticky top navigation with in-page anchors."
@@ -77,6 +77,14 @@
       "title": "Establish a coherent visual theme using Tailwind CSS inspired by the provided HTML/CSS (dark hero gradient, off-white surfaces, light-gray section backgrounds, subtle borders, and a single accent color similar to #0066cc) and apply it consistently across typography, spacing, cards, and section dividers. Do not use a blue+purple dual theme.",
       "reqIds": [
         "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-hero-header-h1-text-at-xpath-html-1-body-1-div-1-div-1-header-1-div-2-h1-1-to-display-exactly-shibhu-replacing-the-current-text-shivasankari-bhuvaneswaran-without-changing-any-other-header-content-or-styling",
+      "title": "Update the hero header H1 text at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[2]/h1[1] to display exactly “ShiBhu” (replacing the current text “Shivasankari Bhuvaneswaran”), without changing any other header content or styling.",
+      "reqIds": [
+        "REQ-10"
       ],
       "version": 1
     }

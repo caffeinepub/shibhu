@@ -1,7 +1,7 @@
 {
   "frontend/src/App.tsx": "Main application entry point that renders the single-page portfolio layout.",
   "frontend/src/components/portfolio/PortfolioPage.tsx": "Main portfolio page component that composes all sections (Header, Navigation, Articles, Expertise, Stats, About, Footer) into a single scrollable layout.",
-  "frontend/src/components/portfolio/HeaderSection.tsx": "Hero header section with name, tagline, and expertise tags displayed as pill badges with a dark gradient background.",
+  "frontend/src/components/portfolio/HeaderSection.tsx": "Hero header section with name \"ShiBhu\", tagline, and expertise tags displayed as pill badges with a dark gradient background.",
   "frontend/src/components/portfolio/StickyNav.tsx": "Sticky top navigation bar with smooth scroll-to-section functionality for Articles, Expertise, Portfolio, and About links.",
   "frontend/src/components/portfolio/ArticlesSection.tsx": "Articles section that renders categorized article groups with responsive grid layouts.",
   "frontend/src/components/portfolio/ArticleCard.tsx": "Reusable article card component with platform badge, date, description, hover effects, and external link.",
